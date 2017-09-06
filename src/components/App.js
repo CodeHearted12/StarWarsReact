@@ -27,7 +27,12 @@ constructor (props){
   // handleNameChange below:
   // See form lesson for details.
   // Enter your code below:
+handleNameChange (event) {
+  this.setState({
 
+    value:event.target.value
+  })
+}
 
 
   //  FORM: SUBMIT METHOD
@@ -36,7 +41,14 @@ constructor (props){
   // Once the form is sumbited, two things need to happen: set the state of pilot to the input value.
   // Then, set the value of the input back to an empty string.
   // Enter your code below:
+    handleSubmit (event) {
+      event.preventDefault()
+      this.setState({
+        Pilot:this.state.value,
+        value:''
 
+      })
+    }
 
   // LIFECYCLE
   // Which lifecycle is best for fetching data?
