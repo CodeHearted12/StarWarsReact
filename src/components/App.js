@@ -57,7 +57,18 @@ handleNameChange (event) {
   // In your response look for 'results'. It should return this array.
   // You will want to use this array when you set the state of 'vehicles'. You will need this data in your render.
   // Enter your code below:
+componentDidMount(){
+console.log ('did mount')
+ fetch('https://swapi.co/api/vehicles/')
+ .then(response => response.json())
+ .then(json => {
+console.log(json.results);
+this.setState ({
+vehicles: json.results
 
+    })
+   })
+  }
 
   // RENDER
   // Before you can map over the data you've fetched, you will first need to store that 'state' in a variable.
@@ -75,6 +86,11 @@ handleNameChange (event) {
     })
     return (
       <div className="App">
+      <Jumbotron pilotName={this.state.pilot}/>
+      <Form handleSubmit={this.handleSubmit.bind(this)}>
+      handleNameChange={this.handleNameChange.bind(this)}
+      <value={this.state.value}/>
+      <Vehicles vehicles={this.state.vehicles}/>
         {/*
         The App component needs the following:
          jumbotron section, form section, vehicle cards section.
