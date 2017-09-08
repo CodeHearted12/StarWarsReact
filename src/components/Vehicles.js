@@ -29,9 +29,9 @@ render() {
     </div>
   )
 })
-}
 
-              return (  <main className="row">
+
+              return (<main className="row">
               <section className="col-md-10 offset-md-1">
                 < div className = "row" >
                   {vehicles}
@@ -40,5 +40,5 @@ render() {
                         </main>
                 );
                }
-             
+              }
                export default Vehicles;

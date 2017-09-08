@@ -15,7 +15,7 @@ constructor (props){
   this.state = {
     vehicles: [],
     value: '',
-    pilot; ''
+    pilot: ''
   }
   this.handleSubmit = this.handleSubmit.bind(this)
   this.handleNameChange = this.handleNameChange.bind(this)
@@ -83,20 +83,22 @@ vehicles: json.results
     Store vehicles state in a variable.
     Map over this variable to access the values needed to render.
     */
-    })
+
     return (
       <div className="App">
-      <Jumbotron pilotName={this.state.pilot}/>
-      <Form handleSubmit={this.handleSubmit.bind(this)}>
-      handleNameChange={this.handleNameChange.bind(this)}
-      <value={this.state.value}/>
-      <Vehicles vehicles={this.state.vehicles}/>
-        {/*
+        <Jumbotron pilotName={this.state.pilot}/>
+          <Form handleSubmit={this.handleSubmit.bind(this)}
+            handleNameChange={this.handleNameChange}
+              value={this.state.value}/>
+                <Vehicles vehicles={this.state.vehicles}/>
+     </div>
+
+        /*
         The App component needs the following:
          jumbotron section, form section, vehicle cards section.
          Your form will also need a header in which you will pass the state of the form upon submit.
-         */}
-      </div>
+         */
+
     );
   }
 }
