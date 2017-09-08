@@ -30,3 +30,15 @@ render() {
   )
 })
 }
+
+              return (  <main className="row">
+              <section className="col-md-10 offset-md-1">
+                < div className = "row" >
+                  {vehicles}
+                 < /div>
+              </section >
+                        </main>
+                );
+               }
+             
+               export default Vehicles;
