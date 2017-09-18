@@ -44,7 +44,7 @@ handleNameChange (event) {
     handleSubmit (event) {
       event.preventDefault()
       this.setState({
-        Pilot:this.state.value,
+        pilot:this.state.value,
         value:''
 
       })

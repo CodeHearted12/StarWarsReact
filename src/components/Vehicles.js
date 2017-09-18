@@ -18,7 +18,7 @@ render() {
                           <li className="list-group-item">Class: {vehicles.vehicle_class}</li>
                         <li className="list-group-item">Passengers: {vehicles.passengers}</li>
                       <li className="list-group-item">Crew: {vehicles.crew}</li>
-                    <li className="list-group-item">Length: {vehicles.length}</li>
+    <li className="list-group-item">Length: {vehicles.length}</li>
                   <li className="list-group-item">Max Speed: {vehicles.max_atmosphering_speed}</li>
                 <li className="list-group-item">Cargo Capacity: {vehicles.cargo_capacity}</li>
               </ul>
